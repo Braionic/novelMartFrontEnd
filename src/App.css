@@ -66,3 +66,11 @@ a{
 box-shadow: none;
 border-color: inherit;
 }
+
+footer {
+background-color: var(--color-232f3e);
+}
+
+footer:not(:nth-child(0)) {
+border-top: 1px solid gray;
+}
