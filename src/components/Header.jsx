@@ -125,9 +125,10 @@ export default function Header() {
                 <div className="navlinks">
                   <div className="d-flex align-items-center justify-content-between gap-4">
                     <NavLink to="">Home</NavLink>
-                    <NavLink to="">Our Store</NavLink>
-                    <NavLink to="">Blogs</NavLink>
-                    <NavLink to="">Contacts</NavLink>
+                    <NavLink to="our-store">Our Store</NavLink>
+                    <NavLink to="blog">Blogs</NavLink>
+                    <NavLink to="contact">Contacts</NavLink>
+                    <NavLink to="about">About</NavLink>
                   </div>
                 </div>
               </div>

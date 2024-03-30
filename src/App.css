@@ -10,9 +10,12 @@
   --color-febd69: #febd69;
   --color-864f06: #864f06;
   --color-232f3e: #232f3e;
+  --color-f5f5f7: #f5f5f7;
+  --background-color: rgb(241, 238, 238)
 }
 body {
   font-family: "Rubik", "sans-serif";
+  background-color: var(--background-color);
 }
 
 .header-top-strip {
@@ -134,4 +137,247 @@ color: var(--color-864f06);
   }
   
  
+  /* Home wrapper 2 */
+
+  .section-2 {
+    background-color: var(--color-f5f5f7);
+  }
+
+  .service-details > h5 {
+font-size: 14px;
+margin-bottom: 0;
+}
+.service-details > p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.lowersection {
+  background-color: white;
+}
+
+.brand-section {
+  background-color: rgb(241, 238, 238);
+}
+
+.blog-image {
+  width: 100px;
+  height: 100px;
+}
+.card-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.readmore {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.blog-container {
+  background-color: rgb(241, 238, 238);
+}
+
+.blogcontent > p {
+  font-size: 13px;
+  color:grey;
+  font-weight: 400;
+}
+
+
+.action-bar {
+  top: 20%;
+  right: -30px;
+  position: absolute;
+ opacity: 0;
+  transition: 0.5s;
+}
+.action-bar > div {
+  transition: 0.3s background;
+}
+.action-bar > div:hover {
+  background-color: #febd69;
+  border-radius: 100%;
   
+}
+
+.myimgg {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: white;
+}
+.collection-cards-container:hover .action-bar {
+ right: 11px;
+ top: 40px;
+  opacity: 1;
+}
+
+.collectionCard .card-image :nth-child(2) {
+  display: none;
+}
+.collectionCard:hover .card-image :nth-child(2) {
+  display: block;
+}
+
+.collectionCard:hover .card-image :nth-child(1) {
+  display: none;
+}
+
+.collection-container {
+  background-color: white;
+}
+
+
+.lists-container > ul {
+list-style-type: none;
+padding: 0;
+}
+
+.lists-container > ul > li {
+  font-size: 13px;
+  color: darkgray;
+}
+
+.lists-container > ul > li > a {
+  color: darkgray;
+}
+.lists-container > ul > li > a:hover {
+  color: black;
+}
+
+
+
+.btn-active:focus {
+  background-color: black;
+  color: white
+}
+
+.gr12 {
+  width: 100%;
+}
+
+.gr6 {
+  width: 50%;
+}
+
+.gr4 {
+width: 33.3%;
+}
+
+.gr3{
+  width: 25%
+}
+
+.gr4 img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 200px;
+  }
+
+.gr6 img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 200px;
+width: 100%
+  }
+
+  .gr12 img {
+    margin: 0 auto;
+    display: block;
+    height: 200px;
+    padding-left: 10px;
+    border-radius: 12px;
+    }
+    .gr12 .card-image {
+     width: 300px;
+     margin: 6px
+      }
+  .gr12 .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .action-bar img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form-check > label {
+    font-size: 12px;
+    color: grey;
+  }
+
+  .form-check-input {
+    width: 13px;
+    height: 13px;
+  }
+
+  h6 {
+    font-size: 13px;
+    
+  }
+
+
+  .colors > li{
+    border-radius: 50%;
+    padding: 7px;
+    background-color: red;
+  }
+
+  .filter-tags > button {
+
+    font-size: 12px;
+  }
+
+  .blogcards {
+    float: left;
+    width: 23%;
+  }
+
+  .contact-form div {
+    width: 600px;
+  }
+
+  .contact-form input {
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-f5f5f7)
+  }
+  .contact-submit-btn {
+    background-color: black;
+    color: white
+  }
+  .contact-submit-btn:hover {
+    background-color: orange;
+  }
+
+  .contact-us-list {
+    list-style-type: none;
+  }
+  .contact-us-list li {
+line-height: 2;
+  }
+  @media only screen and (max-width: 922px){
+    /*Tablets [601px -> 1200px]*/
+    .blogcards{
+      width: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+  /*Tablets [601px -> 1200px]*/
+  .blogcards{
+    width: 100%;
+  }
+}
+
