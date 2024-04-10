@@ -1,6 +1,9 @@
 import React from "react";
 import ReactHelmet from "../components/ReactHelmet";
 import HeadingBar from "../components/HeadingBar";
+import { IoHome, IoCall } from "react-icons/io5";
+import { FaEnvelope } from "react-icons/fa";
+import { BsCalendar2DateFill } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -15,60 +18,76 @@ export default function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d46830151.11795828!2d-119.8093025!3d44.24236485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1711835182026!5m2!1sen!2sus"
                 width="600"
                 height="450"
+                title="contact"
                 className="b-0 w-100"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-              <div className="contact-form-area d-flex align-items-center justify-content-around bg-light my-5">
-                <form className="contact-form d-flex align-items-center justify-content-center flex-column gap-3">
-                  <h3>Contact Form</h3>
-                  <div>
-                    <input
-                      className="py-2 w-100"
-                      type="text"
-                      name="name"
-                      placeholder="enter name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      className="w-100"
-                      type="text"
-                      email="name"
-                      placeholder="enter email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      style={{ resize: "none" }}
-                      cols={5}
-                      rows={5}
-                      className="w-100 p-3"
-                    >
-                      Enter informations here
-                    </textarea>
-                  </div>
-                  <div className="d-flex justify-content-end">
-                  <button className="contact-submit-btn px-2 py-1 border-0 rounded" type="button">Submit</button>
-                  </div>
-                  
-                </form>
-                <div className="p-3">
-                  <h3>Get intouch with us</h3>
-                  <ul className="contact-us-list">
+              <div className="contact-form-area d-flex justify-content-around bg-white my-5 p-3 rounded shadow">
+                <div>
+                  <h5 className="my-4">Contact Form</h5>
+                  <form className="contact-form d-flex align-items-center justify-content-center flex-column gap-3">
+                    <div>
+                      <input
+                        className="py-2 w-100"
+                        type="text"
+                        name="name"
+                        placeholder="enter name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <input
+                        className="w-100"
+                        type="text"
+                        email="name"
+                        placeholder="enter email"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <textarea
+                        style={{ resize: "none" }}
+                        cols={5}
+                        rows={5}
+                        className="text-area w-100 p-3"
+                      >
+                        Enter informations here
+                      </textarea>
+                    </div>
+                    <div className="d-flex justify-content-end">
+                      <button
+                        className="contact-submit-btn px-2 py-1 border-0 rounded"
+                        type="button"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div className="contact-details">
+                  <h5 className="my-4">Get intouch with us</h5>
+                  <div className="contact-list-container"></div>
+                  <ul className="contact-us-list ps-0">
                     <li>
-                      <address>
+                      <IoHome />
+                      <span>
                         1 edomwadagbeon street of new lagos road benin
-                      </address>
+                      </span>
                     </li>
                     <li>
+                      <IoCall />
                       <tel>45678909876789</tel>
                     </li>
-                    <li><email>trustedward@gmail.com</email></li>
-                    <li>From Mon - Fri</li>
+                    <li>
+                      <FaEnvelope />
+                      <email>trustedward@gmail.com</email>
+                    </li>
+                    <li>
+                      <BsCalendar2DateFill />
+                      <span className="">From Mon - Fri</span>
+                    </li>
                     <div></div>
                   </ul>
                 </div>

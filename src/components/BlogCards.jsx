@@ -30,7 +30,7 @@ export default function BlogCards() {
           This device is nice and recommended anywhere in the world, you can
           trust me on that
         </p>
-        <Link>
+        <Link to="/blog/id">
           <button className="readmore">Read More</button>
         </Link>
       </div>

@@ -55,7 +55,7 @@ export default function Header() {
                     Products
                   </p>
                 </Link>
-                <Link className="compare d-flex gap-2">
+                <Link to="wishlist" className="compare d-flex gap-2">
                   <img src={wishImg} alt="compare icon" />
 
                   <p className="text-white mb-2">
@@ -65,11 +65,12 @@ export default function Header() {
                 </Link>
                 <Link className="compare d-flex gap-2">
                   <img src={userImg} alt="compare icon" />
-
-                  <p className="text-white mb-2">
-                    Log in <br />
-                    My Account
-                  </p>
+                  <NavLink to="login">
+                    <p className="text-white mb-2">
+                      Log in <br />
+                      My Account
+                    </p>
+                  </NavLink>
                 </Link>
                 <Link className="compare d-flex gap-2">
                   <img src={cartImg} alt="compare icon" />
@@ -98,7 +99,9 @@ export default function Header() {
                       aria-expanded="false"
                     >
                       <img src={menuImage} alt="menu" />
-                      <span className="d-inline-block m-1 me-3">Shop Categories</span>
+                      <span className="d-inline-block m-1 me-3">
+                        Shop Categories
+                      </span>
                     </button>
                     <ul
                       className="dropdown-menu"

@@ -8,6 +8,7 @@ import ReactStars from "react-stars";
 export default function OurstoreCards({ grid }) {
   const { pathname } = useLocation();
   console.log(pathname);
+  
   return (
     <div
       className={`collection-cards-container col-xs-8 col-sm-5 col-md-3  ${
