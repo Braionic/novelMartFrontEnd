@@ -60,16 +60,16 @@ export default function Footer() {
             </div>
             <div className="col-3 text-white d-flex flex-column gap-2">
               <h5>OUR STORE</h5>
-              <Link>Returns</Link>
+              <Link to="returns">Returns</Link>
               <Link>How To Buy</Link>
-              <Link>Deliveries</Link>
+              <Link to="deliveries">Deliveries</Link>
               <Link>Coupons & Promotions</Link>
             </div>
             <div className="col-2 text-white d-flex flex-column gap-2">
               <h5>USEFULL LINKS</h5>
-              <Link to="">Terms & Condition</Link>
-              <Link>Contact Us</Link>
-              <Link>Policy</Link>
+              <Link to="terms">Terms & Condition</Link>
+              <Link to="contact">Contact Us</Link>
+              <Link to="privacy">Privacy</Link>
             </div>
             <div className="col-2 text-white d-flex flex-column gap-2">
               <h5>CONNECT WITH US</h5>

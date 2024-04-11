@@ -21,7 +21,7 @@ export default function SingleBlog() {
                     </h5>
                   </Link>
                   <h3>A Beautiful Sunday Mornong Renaissance</h3>
-                  <div className="py-3 w-50 h-50">
+                  <div className="py-3 w-100 h-75">
                   <img src={leftBanner1} alt="blog banner" className="w-full img-fluid " />
                     </div>
                   <div className="main-section">

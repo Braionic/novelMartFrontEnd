@@ -379,6 +379,11 @@ width: 100%
       line-height: 2.5;
     font-size: 15px;
   }
+
+  /* terms and policies*/
+  .terms, .returns, .delivery, .refunds {
+    background-color: white;
+  }
   @media only screen and (max-width: 922px){
     /*Tablets [601px -> 1200px]*/
     .blogcards{

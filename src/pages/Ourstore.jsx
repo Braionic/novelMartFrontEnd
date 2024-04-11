@@ -9,7 +9,7 @@ import ReactHelmet from "../components/ReactHelmet";
 export default function Ourstore() {
   const [grid, setGrid] = useState(() => 3);
   return (
-    <div>
+    <>
       <ReactHelmet pageTitle="Our Store" page="our-store" />
       <HeadingBar title="our store" />
       <section className="section-2-wrapper m-3">
@@ -110,6 +110,6 @@ export default function Ourstore() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
