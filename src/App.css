@@ -384,6 +384,49 @@ width: 100%
   .terms, .returns, .delivery, .refunds {
     background-color: white;
   }
+
+
+  /* description */
+  .description-text {
+    font-size: 13px;
+    color: gray;
+  }
+
+  /* single product images */
+  .single-product-grid-image {
+    width: 48%;
+    height: 48%;
+  }
+
+  .single-product-image, .single-product-image > div {
+    background-color: white;
+  }
+
+  .bg-white {
+    background-color: white;
+  }
+
+  .single-product-grid-image-containter > div {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .single-page-review-text {
+    font-size: 13px;
+  }
+  .font-14{
+    font-size: 14px;
+  }
+
+  .js-image-zoom__zoomed-image {
+    right: 0px !important;
+    opacity: 1 !important;
+    z-index: 1;
+    border-radius: 10px !important;
+  }
+
+  .outline-black {
+    outline: 2px solid black;
+  }
   @media only screen and (max-width: 922px){
     /*Tablets [601px -> 1200px]*/
     .blogcards{
