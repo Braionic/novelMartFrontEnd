@@ -427,6 +427,13 @@ width: 100%
   .outline-black {
     outline: 2px solid black;
   }
+.QA {
+  opacity: 0;
+  transition: 1s
+}
+
+
+
   @media only screen and (max-width: 922px){
     /*Tablets [601px -> 1200px]*/
     .blogcards{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactHelmet from "../components/ReactHelmet";
 import HeadingBar from "../components/HeadingBar";
 import OurstoreCards from "../components/OurstoreCards";
@@ -6,8 +6,60 @@ import ReactStars from "react-stars";
 import ReactImageZoom from "react-image-zoom";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoIosGitCompare } from "react-icons/io";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { FaAngleDown, FaAngleRight, FaRegClipboard } from "react-icons/fa6";
+import { IoShirtOutline } from "react-icons/io5";
+import { TfiRulerAlt } from "react-icons/tfi";
+import { CiShoppingTag } from "react-icons/ci";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Product() {
+  const [selectedItem, setSelectedItem] = useState(0);
+  const [copyStatus, setCopyStatus] = useState(false); // To indicate if the text was copied
+  const [writeComment, setWriteComment] = useState(false);
+
+  const onCopyText = () => {
+    setCopyStatus(true);
+    setTimeout(() => setCopyStatus(false), 2000); // Reset status after 2 seconds
+  };
+
+  const accordion = [
+    {
+      id: 1,
+      label: "Shipping & Returns",
+      answer:
+        "Free shipping avalable on all orders! we ship all Us domestic orders within 5-10 business days",
+      icon: <CiDeliveryTruck />,
+    },
+    {
+      id: 2,
+      label: "Materials",
+      answer:
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
+      icon: <IoShirtOutline />,
+    },
+    {
+      id: 3,
+      label: "Dimensions",
+      answer:
+        "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as ",
+      icon: <TfiRulerAlt />,
+    },
+    {
+      id: 4,
+      label: "Care Instructions",
+      answer:
+        "loreum ipsum is a platform where you can get random nonsense test to use as place holders",
+      icon: <MdFavoriteBorder />,
+    },
+    {
+      id: 5,
+      label: "Share",
+      answer: "http://localhost:3000/our-store/product/id",
+      icon: <CiShoppingTag />,
+    },
+  ];
+
   const props = {
     width: 400,
     height: 350,
@@ -174,6 +226,55 @@ export default function Product() {
                     <span>Add to wishlist</span>
                   </div>
                 </div>
+                <div className="accordion">
+                  {accordion.map((item, index) => {
+                    index += 1;
+                    return (
+                      <>
+                        <div
+                          className="bg-white border-bottom  text-link-light p-2 rounded d-flex align-items-center justify-content-between  mb-1"
+                          onClick={() =>
+                            selectedItem === item.id
+                              ? setSelectedItem(0)
+                              : setSelectedItem(item.id)
+                          }
+                          key={item.id}
+                        >
+                          <div className="d-flex align-items-center ">
+                            {item.icon}
+                            <p className="mb-0 ms-2 ">{item.label}</p>
+                          </div>
+                          {selectedItem === index ? (
+                            <FaAngleDown />
+                          ) : (
+                            <FaAngleRight />
+                          )}
+                        </div>
+                        {selectedItem === index && (
+                          <div
+                            role="button"
+                            className={`bg-info border border-1 mt-0  p-2 rounded cursor-pointer`}
+                          >
+                            <CopyToClipboard
+                              text={item.answer}
+                              onCopy={onCopyText}
+                            >
+                              <div className="d-flex align-items-center justify-content-between ">
+                                <p className="mt-0 font-14">{item.answer}</p>
+                                <FaRegClipboard />
+                              </div>
+                            </CopyToClipboard>
+                            {copyStatus && (
+                              <p className="bg-success">
+                                Text copied to clipboard!
+                              </p>
+                            )}
+                          </div>
+                        )}
+                      </>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -227,7 +328,96 @@ export default function Product() {
           </div>
         </div>
       </section>
-      <section className="wrapper-3 mb-5">
+      <section className="main-wrapper-4 my-5">
+        <div className="container-xl">
+          <div className="row">
+            <div className="col-12">
+              <div className="reviews bg-white p-4 rounded">
+                <h4>Customer Reviews</h4>
+                <div className="write-a-review border-bottom d-flex align-items-center justify-content-between">
+                  <div className="d-flex align-item-center gap-2">
+                    <ReactStars
+                      count={5}
+                      //onChange={ratingChanged}
+                      value={3}
+                      size={18}
+                      color2={"#ffd700"}
+                    />
+                    <span className="text-secondary font-14">
+                      Based on 2 Reviews
+                    </span>
+                  </div>
+                  <div role="button"
+                    onClick={() => setWriteComment((oldVal) => !oldVal)}
+                    className="review-togle"
+                  >
+                    <span className="text-secondary font-14">
+                      Write a Review
+                    </span>
+                  </div>
+                </div>
+                {
+                  writeComment && <div>
+                    <div className="write-a-review d-flex align-items-center justify-content-between">
+                      <div className="d-flex flex-column-reverse  align-item-center py-4 gap-2">
+                        <ReactStars
+                          count={5}
+                          //onChange={ratingChanged}
+                          value={3}
+                          size={18}
+                          color2={"#ffd700"}
+                        />
+                        <span className="text-secondary font-14">
+                          Write a Reviews
+                        </span>
+                      </div>
+                    </div>
+                    <div className="border-bottom pb-4">
+                      <form className="my-2">
+                        <div className="form-group">
+                          <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                            placeholder="Comments"
+                          ></textarea>
+                        </div>
+                      </form>
+                      <div className="d-flex align-align-items-center justify-content-end">
+                        <button className="btn btn-lg btn-dark rounded-pill font-14">
+                          Submit Review
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                }
+                <div className="customers-review">
+                  <div className="d-flex align-items-center gap-2">
+                    <h5 className="mb-0 font-14">Navdeep</h5>
+                    <ReactStars
+                      count={5}
+                      //onChange={ratingChanged}
+                      value={3}
+                      size={25}
+                      color2={"#ffd700"}
+                    />
+                  </div>
+                  <div className="mt-4">
+                    <p className="font-14">
+                      In publishing and graphic design, Lorem ipsum is a
+                      placeholder text commonly used to demonstrate the visual
+                      form of a document or a typeface without relying on
+                      meaningful content. Lorem ipsum may be used as a
+                      placeholder before the final copy is available.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="wrapper-4 mb-5">
         <div className="container-xl">
           <div className="row">
             <div className="col-12">
