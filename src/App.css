@@ -165,6 +165,10 @@ margin-bottom: 0;
   background-color: white;
 }
 
+.h-20 {
+  height: 100px;
+}
+
 .brand-section {
   background-color: rgb(241, 238, 238);
 }

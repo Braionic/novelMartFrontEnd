@@ -8,18 +8,16 @@ import ReactStars from "react-stars";
 export default function FCards() {
   return (
     <div className="collection-cards-container col-xs-8 col-sm-5 col-md-3 p-2">
-      <div className="collectionCard position-relative my-2 shadow-sm">
-        <div className="card-image mb-2" style={{ height: "210px" }}>
+      <div className="collectionCard position-relative my-2 shadow-sm h-25 ">
+        <div className="card-image rounded-top overflow-hidden " >
           <img
             src={watch}
-            style={{ objectFit: "contain" }}
-            className="img-fluid rounded-top"
+            className="img-fluid object-fit-contain"
             alt="blogimg"
           />
           <img
             src={watch2}
-            style={{ objectFit: "contain" }}
-            className="img-fluid rounded-top"
+            className="img-fluid object-fit-contain"
             alt="blogimg"
           />
         </div>
