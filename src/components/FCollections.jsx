@@ -12,12 +12,12 @@ export default function FCards() {
         <div className="card-image rounded-top overflow-hidden " >
           <img
             src={watch}
-            className="img-fluid object-fit-contain"
+            className="img-fluid object-fit-cover"
             alt="blogimg"
           />
           <img
             src={watch2}
-            className="img-fluid object-fit-contain"
+            className="img-fluid object-fit-cover"
             alt="blogimg"
           />
         </div>
