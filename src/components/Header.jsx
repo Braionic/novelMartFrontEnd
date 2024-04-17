@@ -72,7 +72,7 @@ export default function Header() {
                     </p>
                   </NavLink>
                 </Link>
-                <Link className="compare d-flex gap-2">
+                <Link to="cart" className="compare d-flex gap-2">
                   <img src={cartImg} alt="compare icon" />
                   <div className="d-flex flex-column gap-1">
                     <span className="badge bg-white text-dark">0</span>

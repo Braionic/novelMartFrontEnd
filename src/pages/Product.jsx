@@ -347,7 +347,8 @@ export default function Product() {
                       Based on 2 Reviews
                     </span>
                   </div>
-                  <div role="button"
+                  <div
+                    role="button"
                     onClick={() => setWriteComment((oldVal) => !oldVal)}
                     className="review-togle"
                   >
@@ -356,8 +357,8 @@ export default function Product() {
                     </span>
                   </div>
                 </div>
-                {
-                  writeComment && <div>
+                {writeComment && (
+                  <div>
                     <div className="write-a-review d-flex align-items-center justify-content-between">
                       <div className="d-flex flex-column-reverse  align-item-center py-4 gap-2">
                         <ReactStars
@@ -390,7 +391,7 @@ export default function Product() {
                       </div>
                     </div>
                   </div>
-                }
+                )}
                 <div className="customers-review">
                   <div className="d-flex align-items-center gap-2">
                     <h5 className="mb-0 font-14">Navdeep</h5>

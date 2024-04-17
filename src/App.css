@@ -18,6 +18,7 @@ body {
   background-color: var(--background-color);
 }
 
+
 .header-top-strip {
   background-color: var(--color-131921);
   border-bottom: 0.1px solid rgb(72, 68, 68);
@@ -60,6 +61,14 @@ a{
   text-decoration: none;
   display: inline-block;
   color:aqua;
+}
+
+a.bc {
+  color: black;
+}
+
+li.active {
+  font-weight: bold;
 }
 
 .header-top .input-group-text {
@@ -416,7 +425,9 @@ width: 100%
   .font-14{
     font-size: 14px;
   }
-
+.font-13 {
+  font-size: 11px;
+}
   .js-image-zoom__zoomed-image {
     right: 0px !important;
     opacity: 1 !important;
@@ -433,6 +444,14 @@ width: 100%
 }
 
 
+/* check out */
+.w-33 {
+  width: 33.3%;
+}
+
+.gap-15 {
+margin: 5px;
+}
 
   @media only screen and (max-width: 922px){
     /*Tablets [601px -> 1200px]*/

@@ -19,6 +19,8 @@ import Deliveries from "./pages/Deliveries";
 import Returns from "./pages/Returns";
 import Refunds from "./pages/Refunds";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -29,9 +31,11 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="our-store" element={<Ourstore />} />
           <Route path="our-store/product/:id" element={<Product />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="contact" element={<Contact />} />
           <Route path="compare" element={<Compare />} />
           <Route path="wishlist" element={<Wishlist />} />
+          <Route path="checkout" element={<Checkout />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
