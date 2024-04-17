@@ -7,22 +7,22 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 export default function FCards() {
   return (
-    <div className="collection-cards-container col-xs-8 col-sm-5 col-md-3 p-2">
-      <div className="collectionCard position-relative my-2 shadow-sm h-25 ">
-        <div className="card-image rounded-top overflow-hidden " >
+    <div className="collection-cards-container col-xs-8 col-sm-5 col-md-3 px-2">
+      <div className="collectionCard position-relative my-2 shadow-sm h-50 ">
+        <div className="card-image rounded-top overflow-hidden h-100" >
           <img
             src={watch}
-            className="img-fluid object-fit-cover"
+            className="img-fluid h-100 w-100"
             alt="blogimg"
           />
           <img
             src={watch2}
-            className="img-fluid object-fit-cover"
+            className="img-fluid w-100 h-100 object-fit-contain"
             alt="blogimg"
           />
         </div>
 
-        <div className="collection-container ps-3 pe-3 pt-5 pb-3">
+        <div className="collection-container ps-3 pe-3 py-3">
           <p
             className="date"
             style={{
@@ -43,7 +43,7 @@ export default function FCards() {
             size={24}
             color2={"#ffd700"}
           />
-          <p className="fs-6 mt-0">$100.00</p>
+          <p className="fs-6 my-0">$100.00</p>
         </div>
         <div className="action-bar">
           <div>
